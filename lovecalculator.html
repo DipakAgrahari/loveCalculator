@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    />
+    <link type="text/css" rel="stylesheet" href="lovecalculator.css" />
+  </head>
+  <body>
+    <header>
+      <div class="card">
+        <div class="card-header">Love Calculator</div>
+        <div class="card-body">
+          <form class="form-inline">
+            <div class="form-group">
+              <input
+                type="text"
+                name=""
+                class="form-control"
+                placeholder="your name"
+                id="name"
+              />
+              <span> + </span>
+              <input
+                type="text"
+                name=""
+                class="form-control"
+                placeholder="Love name"
+                id="lone"
+              />
+            </div>
+          </form>
+
+          <div class="butt">
+            <button class="button" onclick="checklove()">click</button>
+          </div>
+          <div>
+            <input
+              type="text"
+              name=""
+              placeholder="        love percent"
+              id="lovevalue"
+            />
+          </div>
+        </div>
+        <div class="card-footer">God Bless Your RelationShip</div>
+      </div>
+    </header>
+
+    <script>
+      function checklove() 
+      {
+        var lov = document.getElementById("lone").value;
+        var name = document.getElementById("name").value;
+
+        if (name.length < 3)  
+        {
+          alert("please enter upto 3 alphabet");
+        } 
+        else if (lov.length < 3) 
+        {
+          alert("please enter upto 3 alphabet");
+        } 
+        else 
+        {
+          var lovedata = Math.random() * 100;
+          lovedata = Math.floor(lovedata);
+          document.getElementById("lovevalue").value = lovedata + "%";
+        }
+      }
+    </script>
+  </body>
+</html>
